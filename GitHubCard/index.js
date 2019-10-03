@@ -5,7 +5,7 @@
 axios 
 .get("https://api.github.com/users/Ur14592")
 .then( response => {
-  card.appendChild( CardCreator( response.data ) ); 
+  // console.log(`User Info: `, response);
 });
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -47,9 +47,7 @@ const followersArray = [];
     <p>Bio: {users bio}</p>
   </div>
 </div>
-
 */
-
 /* List of LS Instructors Github username's: 
   tetondan
   dustinmyers
@@ -57,3 +55,25 @@ const followersArray = [];
   luishrd
   bigknell
 */
+
+
+const cards = document.querySelector('.cards');
+// console.log(cards);
+
+const createCard = (data) => {
+
+  const card = document.createElement('div');
+  const img = document.createElement('img');
+  const cardInfo = document.createElement('div');
+  const name = document.createElement('h3');
+  const userName = document.createElement('p');
+  const location = document.createElement('p');
+  const profile = document.createElement('p');
+  const profileLink = document.createElement('a');
+  const followers = document.createElement('p');
+  const following = document.createElement('p');
+  const bio = document.createElement('p');
+
+  card.appendChild(img);
+  card.appendChild
+}
